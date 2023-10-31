@@ -1,24 +1,39 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="maplibre-gl.css">
-    <title>Map</title>
-    <style>
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        width: 100vw;
-        height: 100vh;
-      }
-    </style>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="maplibre-gl.css">
+  <title>Map</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+    }
+
+    #map {
+      top: 10vh;
+      width: 50vw;
+      height: 80vh;
+      box-shadow: 0 0 5em 1em #777;
+    }
+
+    .maplibregl-ctrl-attrib.maplibregl-compact-show {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="frame">
     <div id="map"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
